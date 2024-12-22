@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Ootea Tea Company</h1>
+
+    <h1>Tea Brands</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tea ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+                    @foreach (var tea in Model.TeaDetails)
+                    {
+                <tr>
+                    <td>@tea.TeaId</td>
+                    <td>@tea.TeaName</td>
+                </tr>
+            }
+                   
+                    <tr>
+                        <td>
+                            <a href="/AddTea">Add Another Tea Brand</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+    </table>
+</div>
+
