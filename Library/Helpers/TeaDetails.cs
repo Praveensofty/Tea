@@ -1,14 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("TeaDetails", Schema = "public")]
+    [Table("teadetails", Schema = "public")]
     public class TeaDetail
     {
         [Key]
-        [Column("ID")]
+        [Column("td_id")]
         public long TeaId { get; set; }
 
         [Required]
-        [Column("Name", TypeName = "character varying(100)")]
+        [Column("td_name", TypeName = "character varying(100)")]
         public string TeaName { get; set; }
     }
